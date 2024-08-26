@@ -1,4 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@700&display=swap');
+
 html {
   height: 100%;
   width: 100%;
+  
+}
+
+* {
+  font-family: 'Lexend', sans-serif;
+}
+
+body {
+  background-color: #11053b;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+}
+
+.boo {
+  z-index:5;
+
+  position: relative;
+  bottom:100px;
+  height: 100%;
+  width: 100%;
+
+  animation: fadeIn 0.7s;
+}
+.gremlin {
+  z-index:50;
+
+  position: relative;
+  bottom:250px;
+  right:150%;
+  animation: whoop 7s;
+}
+
+.boo2 {
+  z-index:5;
+
+
+  position: relative;
+  bottom:100px;
+  height: 100%;
+  width: 100%;
+  animation: fadeOut 2s;
+}
+
+
+
+ .round-time-bar {
+  margin: 1rem;
+  overflow: hidden;
+}
+.round-time-bar div {
+  height: 5px;
+  animation: roundtime calc(var(--duration) * 1s) steps(var(--duration))
+    forwards;
+  transform-origin: left center;
+  background: linear-gradient(to bottom, #01d300, #007b01);
+}
+
+.round-time-bar[data-style="smooth"] div {
+  animation: roundtime calc(var(--duration) * 1s) linear forwards;
+}
+
+.round-time-bar[data-style="fixed"] div {
+  width: calc(var(--duration) * 5%);
+}
+
+.round-time-bar[data-color="blue"] div {
+  background: linear-gradient(to bottom, #64b5f6, #1565c0);
+}
+
+@keyframes roundtime {
+  to {
+    /* More performant than `width` */
+    transform: scaleX(0);
+  }
+}
+
+.lightBulb {
+  z-index:50;
+  position: relative;
+  top:-650px;
+  left:20%;
+  animation: byeLight 1.5s; 
+}
+
+.lightBulbNormal {
+  z-index:50;
+  position: relative;
+  top:-390px;
+  left:20%;
+}
+
+.lightBulb2 {
+  z-index:50;
+  position: relative;
+  top:-390px;
+  left:20%;
+  animation: byeLight2 0.5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
+@keyframes whoop {
+  0% { right: 150%; }
+  100% { right: -250%; }
+}
+
+@keyframes byeLight {
+  0% {top: -650px;
+  }
+  100% {top: -390px}
+}
+
+@keyframes byeLight2 {
+  0% {top: -390px; 
+  }
+  100% {top: -650px}
 }
