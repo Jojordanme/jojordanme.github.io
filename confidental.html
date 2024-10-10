@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Jojordanme</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload="loaded()">
+  <center>
+    <br>
+    <br>
+    <h1 id="vsauce">There's nothing here, Or is it?</h1>
+    <a style="color:white" href="confidental.html">Useless link</a>
+  </center>
+  <script>
+    var vsauce = document.getElementById("vsauce");
+    vsauce.innerHTML = "There's nothing here, Or is it?";
+    function loaded(){
+      if (document.location.href.includes("?fdsgaid")){
+        if (prompt("please type the password") == "XIQM4") {
+          vsauce.innerHTML = "Awesome Sauce";
+        }
+      }
+    }
+  </script>
+
+</body>
+
+</html>
